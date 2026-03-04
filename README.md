@@ -34,8 +34,9 @@ El puente con el sistema operativo. Una vez que el archivo se guarda en el almac
 ---
 
 <p align="center" >
-  <img src="assets/images/image-1.jpg" alt="App Image" width="360" >
+  <img src="assets/images/image-1.jpg" alt="App Image" width="360" />
+  </p>
 
-<p align="center"
-  <img src="assets/images/image-2.jpg" alt="App Image" width=360">
+<p align="center">
+  <img src="assets/images/image-2.jpg" alt="App Image" width="360" />
 </p>
