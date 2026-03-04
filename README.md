@@ -33,9 +33,9 @@ El puente con el sistema operativo. Una vez que el archivo se guarda en el almac
 
 ---
 
-## 🚀 Instalación y Configuración
+<p align="left" >
+  <img src="assets/images/image-1.jpg" alt="App Image" width="260" style="min-width: 260px;">
 
-1. **Clonar el repositorio:**
-   ```bash
-   git clone [https://github.com/ttmday/yutter.git](https://github.com/tu-usuario/yutter.git)
-
+<p align="left">
+  <img src="assets/images/image-2.jpg" alt="App Image" width="260">
+</p>
