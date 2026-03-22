@@ -22,7 +22,7 @@ class DownloadedState extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final w = MediaQuery.of(context).size.width;
-    final maxWidth = 356.0;
+    final maxWidth = 380.0;
     return Container(
       padding: .symmetric(
         horizontal: AppDesign.padding * 2.5,

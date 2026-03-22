@@ -20,7 +20,7 @@ class StreamInfo extends StatelessWidget {
       child: Consumer<YutterController>(
         builder: (context, provider, _) {
           final w = MediaQuery.of(context).size.width;
-          final maxWidth = 356.0;
+          final maxWidth = 380.0;
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

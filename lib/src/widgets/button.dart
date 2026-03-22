@@ -12,7 +12,7 @@ class Button extends StatelessWidget {
     this.style,
     this.color,
     this.textColor,
-    this.width,
+    this.width = 380.0,
     this.height,
     this.disabled = false,
   });
@@ -30,30 +30,33 @@ class Button extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final maxWidth = 356.0;
-    return MaterialButton(
-      onPressed: disabled ? null : onPressed,
-      disabledColor: AppColors.accent.withValues(alpha: .13),
-      height: height ?? 45.0,
-      minWidth: width != null && width! > maxWidth ? maxWidth : width,
-      color: filled ? color ?? AppColors.primary : null,
-      shape: RoundedRectangleBorder(
-        side: !filled
-            ? BorderSide(color: color ?? AppColors.primary)
-            : BorderSide.none,
-        borderRadius: BorderRadius.circular(AppDesign.radius * 1.2),
-      ),
-      child: Text(
-        text,
-        style:
-            style ??
-            AppDesign.textTheme(context).bodyMedium!.copyWith(
-              fontSize: 15.0,
-              color: !filled
-                  ? (color ?? AppColors.text)
-                  : textColor ?? (color ?? AppColors.foreground),
-              fontWeight: FontWeight.w500,
-            ),
+    final maxWidth = 380.0;
+    return ConstrainedBox(
+      constraints: BoxConstraints(maxWidth: maxWidth),
+      child: MaterialButton(
+        onPressed: disabled ? null : onPressed,
+        disabledColor: AppColors.accent.withValues(alpha: .13),
+        height: height ?? 45.0,
+        minWidth: width != null && width! > maxWidth ? maxWidth : width,
+        color: filled ? color ?? AppColors.primary : null,
+        shape: RoundedRectangleBorder(
+          side: !filled
+              ? BorderSide(color: color ?? AppColors.primary)
+              : BorderSide.none,
+          borderRadius: BorderRadius.circular(AppDesign.radius * 1.2),
+        ),
+        child: Text(
+          text,
+          style:
+              style ??
+              AppDesign.textTheme(context).bodyMedium!.copyWith(
+                fontSize: 15.0,
+                color: !filled
+                    ? (color ?? AppColors.text)
+                    : textColor ?? (color ?? AppColors.foreground),
+                fontWeight: FontWeight.w500,
+              ),
+        ),
       ),
     );
   }

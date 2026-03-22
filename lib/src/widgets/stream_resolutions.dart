@@ -30,7 +30,7 @@ class _StreamResolutionsState extends State<StreamResolutions> {
   @override
   Widget build(BuildContext context) {
     final w = MediaQuery.of(context).size.width;
-    final maxWidth = 356.0;
+    final maxWidth = 380.0;
     return Consumer<YutterController>(
       builder: (context, provider, child) {
         return Column(

@@ -71,7 +71,7 @@ class _VideoUrlTextFormFieldState extends State<VideoUrlTextFormField>
     clipboardWatcher.removeListener(this);
     // stop watch
     clipboardWatcher.stop();
-    _yutterController.dispose();
+    // _yutterController.dispose();r
 
     _intentSub.cancel();
 
@@ -105,6 +105,7 @@ class _VideoUrlTextFormFieldState extends State<VideoUrlTextFormField>
             ),
             const SizedBox(height: AppDesign.padding * 2),
             Row(
+              mainAxisAlignment: .center,
               children: [
                 Button(
                   width: .infinity,

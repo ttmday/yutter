@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:yutter/src/constants/color.dart';
 import 'package:yutter/src/constants/design.dart';
 import 'package:yutter/src/utils/theme.dart';
+import 'package:yutter/src/widgets/clear_button.dart';
 
 import 'package:yutter/src/widgets/search_content.dart';
 
@@ -29,8 +30,12 @@ class HomeView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Yutter(),
-              SizedBox(height: AppDesign.padding / 2),
+              Row(
+                mainAxisAlignment: .spaceBetween,
+                crossAxisAlignment: .center,
+                children: [Yutter(), ClearButton()],
+              ),
+              SizedBox(height: AppDesign.padding),
               Expanded(child: SearchContent()),
             ],
           ),
