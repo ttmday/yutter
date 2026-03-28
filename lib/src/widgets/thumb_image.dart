@@ -18,7 +18,7 @@ class ThumbImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final w = width ?? MediaQuery.of(context).size.width;
-    final maxWidth = 380.0;
+    final maxWidth = 560.0;
     return FadeInImage.assetNetwork(
       placeholder: Assets.emptyState,
       image: thumbnail,

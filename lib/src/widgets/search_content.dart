@@ -14,26 +14,31 @@ class SearchContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      child: Consumer<YutterController>(
-        builder: (context, controller, _) {
-          return ValueListenableBuilder(
-            valueListenable: controller.videoInfoStateNotifier,
-            builder: (context, state, _) {
-              return switch (state) {
-                VideoInfoStatePermission _ => PermissionState(
-                  controller: controller,
-                ),
-                VideoInfoStateLoading _ => const LoadingState(),
-                // APIResponseStateError _ => SomethingWrongState(
-                //   retry: provider.retry,
-                // ),
-                VideoInfoStateSuccess info => Stream(info.data),
-                _ => const EmptyState(),
-              };
+    return Center(
+      child: ConstrainedBox(
+        constraints: BoxConstraints(maxWidth: 560.0),
+        child: SizedBox(
+          child: Consumer<YutterController>(
+            builder: (context, controller, _) {
+              return ValueListenableBuilder(
+                valueListenable: controller.videoInfoStateNotifier,
+                builder: (context, state, _) {
+                  return switch (state) {
+                    VideoInfoStatePermission _ => PermissionState(
+                      controller: controller,
+                    ),
+                    VideoInfoStateLoading _ => const LoadingState(),
+                    // APIResponseStateError _ => SomethingWrongState(
+                    //   retry: provider.retry,
+                    // ),
+                    VideoInfoStateSuccess info => Stream(info.data),
+                    _ => const EmptyState(),
+                  };
+                },
+              );
             },
-          );
-        },
+          ),
+        ),
       ),
     );
   }

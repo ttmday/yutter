@@ -12,7 +12,7 @@ class Button extends StatelessWidget {
     this.style,
     this.color,
     this.textColor,
-    this.width = 380.0,
+    this.width = 560.0,
     this.height,
     this.disabled = false,
   });
@@ -30,7 +30,7 @@ class Button extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final maxWidth = 380.0;
+    final maxWidth = 560.0;
     return ConstrainedBox(
       constraints: BoxConstraints(maxWidth: maxWidth),
       child: MaterialButton(

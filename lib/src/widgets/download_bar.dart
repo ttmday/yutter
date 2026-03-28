@@ -11,7 +11,7 @@ class DownloadBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final w = MediaQuery.of(context).size.width;
-    final maxWidth = 380.0;
+    final maxWidth = 560.0;
     return Container(
       padding: .all(AppDesign.padding),
       width: w > maxWidth ? maxWidth : w,
